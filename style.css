@@ -1,37 +1,237 @@
 html {
-  height: 100%;
-  width: 100%;
-  font-family: "Titillium Web", sans-serif;
-}
-
-body {
-  min-height: 100%;
-  min-width: 100%;
-  background: linear-gradient(pink, violet);
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 
 button {
   font-size: 7px;
 }
 
-#main-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #153677, #085f08);
+}
+
+#main {
+  width: 100%;
+  max-width: 720px;
+  background: #f9fafa;
+  margin: 100px auto 20px;
+  padding: 40px 40px 70px;
+  border-radius: 18px;
   box-shadow: 2px 5px 5px #333;
 }
 
-#list {
-  margin: 10px;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+h1 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 38px;
+  color: #070707;
+}
+
+h1 img {
+  width: 60px;
+  height: auto;
+  vertical-align: center;
+  margin-left: 10px;
+}
+
+/* Form styling */
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 100px;
+}
+
+#form p {
+  font-size: 22px;
+  text-align: left;
+}
+
+/* Task input */
+input[type="text"] {
+  width: 80%; /* Full width for task input */
+  margin: 0 auto;
+  padding: 12px; /* Increased padding for height */
+  font-size: 16px;
+  border: 2px solid #66bfbf;
+  border-radius: 25px;
+  background-color: rgba(240, 240, 240, 0.9);
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+input[type="text"]:hover {
+  border-color: #28c76f;
+}
+
+input[type="text"]:focus {
+  border-color: #28c76f;
+}
+
+
+/* Priority and Date container */
+.priority-date-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Gap between the two fields */
+  width: 80%; /* Same width as the task input */
+  margin: 0 auto; /* Center container */
+}
+
+/* Custom styled select */
+select {
+  width: 48%;
+  padding: 12px;
+  font-size: 15px;
+  border: 2px solid #66bfbf; /* Custom border color */
+  border-radius: 25px; /* Rounded corners */
+  background-color: rgba(240, 240, 240, 0.9); /* Light grey background */
+  color: #333; /* Darker text color */
+  outline: none;
+  appearance: none; /* Remove default dropdown icon */
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>'); /* Custom dropdown icon */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Icon positioning */
+  background-size: 16px;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+select:hover {
+  border-color: #28c76f; /* Change border on hover */
+}
+
+select:focus {
+  border-color: #28c76f; /* Focused border color */
+  background-color: rgba(255, 255, 255, 0.9); /* Brighter background on focus */
+}
+
+/* Style for options */
+select option {
+  padding: 10px; /* Add padding for options */
+  background-color: #f9f9f9; /* Light grey background for options */
+  color: #333; /* Dark text */
+}
+
+select option:hover {
+  background-color: #e0f7e9; /* Highlight option on hover */
+  color: #000; /* Darker text on hover */
+}
+
+select option[selected] {
+  background-color: #28c76f; /* Highlight the selected option */
+  color: #fff; /* White text for selected option */
+}
+
+/* Date input */
+input[type="date"] {
+  width: 48%; /* Keep the date input side by side */
+  padding: 12px;
+  font-size: 15px;
+  border: 2px solid #66bfbf;
+  border-radius: 25px;
+  background-color: rgba(240, 240, 240, 0.9);
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+input[type="date"]:hover {
+  border-color: #28c76f;
+}
+
+
+input[type="date"]:focus {
+  border-color: #28c76f;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button styling */
+input[type="submit"] {
+  width: 100px;
+  padding: 18px 8px;
+  background-color: #28c76f;;
+  color: white;
+  border: none;
+  border-radius: 46px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s;
+  margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(32, 166, 90, 0.9);
+  opacity: 0.95;
+}
+
+.high-priority {
+  color: rgb(255, 0, 0);
+}
+
+.medium-priority {
+  color:rgb(255, 153, 0)
+}
+
+.low-priority {
+  color: rgb(0, 153, 0);
+}
+
+/* Due date that has passed */
+.overdue {
+  text-decoration: line-through;
+  color: gray;
+}
+
+#main h2 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: solid underline #00ac4d;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #070707;
+}
+
+ul li {
+  font-size: 24px;
+  line-height: 1em;
+  padding: 12px 8px 12px 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+span {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+  font-weight: bolder;
+  line-height: 40px;
+  color: #222;
+  text-align: center;
+  border-radius: 50px;
+}
+
+span:hover {
+  color: red;
+  background-color: #bebebe;
 }

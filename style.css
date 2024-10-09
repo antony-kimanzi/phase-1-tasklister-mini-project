@@ -192,6 +192,11 @@ input[type="submit"]:hover {
   color: gray;
 }
 
+.list-hdr {
+  display: flex;
+  justify-content: space-between;
+}
+
 #main h2 {
   font-family: "Lobster", sans-serif;
   font-weight: 400;
@@ -202,6 +207,25 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
   font-size: 30px;
   color: #070707;
+}
+
+.sort-btn {
+  width: 100px;
+  padding: 2px;
+  background-color: #153677;;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s;
+  margin-top: 10px;
+}
+
+.sort-btn:hover {
+  background-color: #28c76f;
+  opacity: 0.95;
 }
 
 ul li {
@@ -235,3 +259,4 @@ span:hover {
   color: red;
   background-color: #bebebe;
 }
+

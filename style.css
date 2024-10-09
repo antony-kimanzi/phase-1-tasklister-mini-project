@@ -35,13 +35,6 @@ h1 {
   color: #070707;
 }
 
-h1 img {
-  width: 60px;
-  height: auto;
-  vertical-align: center;
-  margin-left: 10px;
-}
-
 /* Form styling */
 #form {
   display: flex;
